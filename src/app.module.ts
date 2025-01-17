@@ -16,7 +16,7 @@ import { CategoriaModule } from './categorias/categorias.module';
       entities: [Categorias],
       synchronize: true,
     }), 
-    CategoriaModule
+    CategoriaModule,
     
   ],
   controllers: [],

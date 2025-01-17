@@ -5,7 +5,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 export class Categorias{
 
     @PrimaryGeneratedColumn()
-    id: Number;
+    id: number;
 
     @IsNotEmpty()
     @Column({length:255 , nullable: true})
