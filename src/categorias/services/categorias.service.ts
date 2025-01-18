@@ -14,7 +14,12 @@ export class CategoriaService {
     ){}
 
     async findAll(): Promise<Categorias[]> {
-        return await this.categoriasRepository.find()
+        return await this.categoriasRepository.find({
+            relations:{
+                jogos: true
+            }
+        })
+       
     }
 
 
@@ -26,7 +31,9 @@ export class CategoriaService {
             {
                 id
             },
-           
+            relations:{
+                jogos: true
+            }
         })
     
     
@@ -41,7 +48,9 @@ export class CategoriaService {
 
              nome_da_categoria_do_Jogo : ILike(`%${nome_da_categoria_do_Jogo}%`),
             },
-          
+            relations:{
+                jogos: true
+            }
         });
         }
 
